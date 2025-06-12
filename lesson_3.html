@@ -18,13 +18,13 @@
             table th,
             table td {
         padding: 10px;
-        border: 1px solid #2a2a2a;}
-        .column1 {color: aqua;}
+        border: 5px solid #2a2a2a;}
+        .column1 {color: rgb(255, 0, 98);}
         #tables {background-color: aliceblue;}
         #forms {background-color: beige;}
         
     </style>
-    <title>Document</title>
+    <title>lesson_3</title>
   </head>
   <body>
     <header>
@@ -41,9 +41,9 @@
     <section id="tables">
 <!-- TABLES -->
     <table>
-      <h2>
+      <caption>
         TABLES
-      </h2>
+      </caption>
       <caption>
         Train schedule
       </caption>
@@ -51,6 +51,7 @@
         <tr>
           <th class="column1">Train number</th>
           <th>Route</th>
+          <th>Travel time</th>
           <th>Travel time</th>
         </tr>
       </thead>
@@ -60,15 +61,18 @@
           <td class="column1">433</td>
           <td>London - Paris</td>
           <td>5 hours</td>
+          <td>5 hours</td>
         </tr>
         <tr>
           <td class="column1">701</td>
           <td>New York - Chicago</td>
           <td>7 hours</td>
+          <td>7 hours</td>
         </tr>
         <tr>
           <td class="column1">258</td>
           <td>Oslo - Warsaw</td>
+          <td>4 hours</td>
           <td>4 hours</td>
         </tr>
       </tbody>
@@ -94,11 +98,13 @@
   <br>
   <label>
     Password
-    <input type="password" name="pwd" minlength="5" maxlength="12" />
+    <input type="password" name="pwd" 
+    minlength="5" maxlength="12" placeholder="*****"/>
   </label>
+  <br>
   <label>
-    Phone number
-    <input type="tel" name="phone" />
+    Phone No
+    <input type="tel" name="phone" placeholder="+380*********"/>
   </label>
    <p>What are your hobbies?</p>
   <label>
@@ -114,6 +120,7 @@
     Reading
   </label>
   <br>
+  <!-- ДОДАВАННЯ ПОВЗУНКА ІЗ СКРИПТОМ -->
   <label>
   Interest rate:
   <input
@@ -122,19 +129,34 @@
     value="40"
     min="0"
     max="100"
-    step="20"
+    step="10"
   />
 </label>
-
+<!-- РЕЗУЛЬТАТ ІЗ ЗМІННОЮ -->
 <p>Selected value: <span class="js-selected-value">40</span></p>
 <br>
-<input type="radio" id="radio">
+<!--  -->
+<p>select</p>
+<label><input type="radio" name="select" value="1">1</label>
+<input type="radio" name="select" value="2">
+<input type="radio" name="select" value="3">
+<input type="radio" name="select" value="4">
 <label for="radio"></label>
 <br>
-  <button type="submit">Submit</button>
+<section>
+  <div>
+    <label for="comment">comment
+      <textarea name="comment" cols="30" rows="10">comment</textarea>
+    </label>
+  </div>
+</section>
+
+<button type="submit">Submit</button>
 </form>
     </section>
   </body>
+
+
   <script>
     const rangeInput = document.querySelector('input[type="range"]')
 const output = document.querySelector('.js-selected-value');
